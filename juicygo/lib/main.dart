@@ -3,11 +3,11 @@ import 'package:juicygo/screen/bottomnavbar_screen.dart';
 import 'package:juicygo/screen/home_page.dart';
 
 void main() {
-  runApp(const juicyGo());
+  runApp(const JuicyGo());
 }
 
-class juicyGo extends StatelessWidget {
-  const juicyGo({super.key});
+class JuicyGo extends StatelessWidget {
+  const JuicyGo({super.key});
 
   @override
   Widget build(BuildContext context) {

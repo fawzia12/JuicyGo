@@ -6,6 +6,7 @@ import 'package:juicygo/model/status_model.dart';
 import 'package:juicygo/widget/appbars.dart';
 import 'package:juicygo/widget/status_view.dart';
 import 'package:juicygo/widget/story_view.dart';
+import 'package:juicygo/widget/story_view_widget.dart';
 import 'package:story_view/story_view.dart';
 
 class HomePage extends StatefulWidget {
@@ -43,14 +44,13 @@ class _HomePageState extends State<HomePage> {
 
                 itemCount: statusList.length,
                 itemBuilder: (context, index) {
+
                   return StatusView(status: statusList[index],
                   ontap: (){
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => StoryViews(status: statusList[index]),
-        ),
-      );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => StoryViewPage(fruitName: statusList[index].name,),),
+                    );
                   },
                   );
                 },
@@ -64,10 +64,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 17),
-            Container(
+           /* Container(
               height: 390,
               width: 270,
-
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: AppColor.cardPink,
@@ -86,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-            ),
+            ),*/
           ],
         ),
       ),

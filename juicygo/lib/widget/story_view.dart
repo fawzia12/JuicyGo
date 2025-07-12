@@ -20,7 +20,7 @@ class StoryViews extends StatelessWidget {
       },
       storyItems: [
         StoryItem.inlineImage(
-          url: (status.storyUrls != null && status.storyUrls!.length>0)
+          url: (status.storyUrls != null && status.storyUrls!.isNotEmpty)
               ? status.storyUrls![0]
               : 'default_image_url_or_empty_string',
           imageFit: BoxFit.contain,
